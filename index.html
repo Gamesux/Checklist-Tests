@@ -3,63 +3,53 @@
 </head>
 
 <script>
-function save(){
-    var checkbox = document.getElementById('checkboxSave');
-    localStorage.setItem('checkboxSave', checkbox.checked);
-}
+jQuery($ => {
+  var arr = JSON.parse(localStorage.getItem('checked')) || [];
+  arr.forEach((c, i) => $('.box').eq(i).prop('checked', c));
 
-function load(){    
-    var checked = JSON.parse(localStorage.getItem('checkboxSave'));
-    document.getElementById("checkboxSave").checked = checked;
-}
+  $(".box").click(() => {  
+    var arr = $('.box').map((i, el) => el.checked).get();
+    localStorage.setItem("checked", JSON.stringify(arr));
+  });
+});
 
-function wis(){
-    location.reload();
-    localStorage.clear()
-
-}
-
-load();
 </script>
 
-<body onload="load()">
-
-<input type="button" id="SaveButton" value="save" onclick="save()"/>
-<input type="button" id="DeleteButton" value="delete" onclick="wis()"/>
+<body>
 
 <div class="background">
 	<div class="transbox">
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Alto Singh</div> <div class='normal'>In a coffin after Quillback in 1-4.</div> <br>
+		<input type='checkbox' id="checkboxSave1" class="box" /><div class='bruh'>Alto Singh</div> <div class='normal'>In a coffin after Quillback in 1-4.</div> <br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Liz Mutton</div> <div class='normal'>In a coffin in 2-1 (Jungle).</div><br>
+		<input type='checkbox' id="checkboxSave2" class="box" /><div class='bruh'>Liz Mutton</div> <div class='normal'>In a coffin in 2-1 (Jungle).</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Nekka the Eagle</div> <div class='normal'>In a coffin in the Black Market.</div><br>
+		<input type='checkbox' id="checkboxSave3" class="box" /><div class='bruh'>Nekka the Eagle</div> <div class='normal'>In a coffin in the Black Market.</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Lise Project</div> <div class='normal'>In a coffin in 2-1 (Volcana).</div><br>
+		<input type='checkbox' id="checkboxSave4" class="box" /><div class='bruh'>Lise Project</div> <div class='normal'>In a coffin in 2-1 (Volcana).</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Coco von Diamonds</div> <div class='normal'>In a coffin in Vlad's Castle.</div><br>
+		<input type='checkbox' id="checkboxSave5" class="box" /><div class='bruh'>Coco von Diamonds</div> <div class='normal'>In a coffin in Vlad's Castle.</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Manfred Tunnel</div> <div class='normal'>In a coffin in Ankh cave (Olmec's Lair).</div><br>
+		<input type='checkbox' id="checkboxSave6" class="box" /><div class='bruh'>Manfred Tunnel</div> <div class='normal'>In a coffin in Ankh cave (Olmec's Lair).</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Little Jay</div> <div class='normal'>In a coffin in 4-4 (Tide Pool).</div><br>
+		<input type='checkbox' id="checkboxSave7" class="box" /><div class='bruh'>Little Jay</div> <div class='normal'>In a coffin in 4-4 (Tide Pool).</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Tina Flan</div> <div class='normal'>In a coffin in Abzu.</div><br>
+		<input type='checkbox' id="checkboxSave8" class="box" /><div class='bruh'>Tina Flan</div> <div class='normal'>In a coffin in Abzu.</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Valerie Crump</div> <div class='normal'>In a coffin in 4-4 (Temple of Anubis).</div><br>
+		<input type='checkbox' id="checkboxSave9" class="box" /><div class='bruh'>Valerie Crump</div> <div class='normal'>In a coffin in 4-4 (Temple of Anubis).</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Au</div> <div class='normal'>In a coffin in the City of Gold.</div><br>
+		<input type='checkbox' id="checkboxSave10" class="box" /><div class='bruh'>Au</div> <div class='normal'>In a coffin in the City of Gold.</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Demi von Diamonds</div> <div class='normal'>In a coffin in Yeti cave.</div><br>
+		<input type='checkbox' id="checkboxSave11" class="box" /><div class='bruh'>Demi von Diamonds</div> <div class='normal'>In a coffin in Yeti cave.</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Pilot</div> <div class='normal'>In a coffin in Mothership.</div><br>
+		<input type='checkbox' id="checkboxSave12" class="box" /><div class='bruh'>Pilot</div> <div class='normal'>In a coffin in Mothership.</div><br>
 		
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Princess Airyn</div> <div class='normal'>In a coffin in Neo Babylon.</div><br>
+		<input type='checkbox' id="checkboxSave13" class="box" /><div class='bruh'>Princess Airyn</div> <div class='normal'>In a coffin in Neo Babylon.</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Dirk Yamoaka</div> <div class='normal'>In a coffin in Goliath Frog's stomach (Sunken City).</div><br>
+		<input type='checkbox' id="checkboxSave14" class="box" /><div class='bruh'>Dirk Yamoaka</div> <div class='normal'>In a coffin in Goliath Frog's stomach (Sunken City).</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Guy Spelunky</div> <div class='normal'>Reach the game's normal ending.</div><br>
+		<input type='checkbox' id="checkboxSave15" class="box" /><div class='bruh'>Guy Spelunky</div> <div class='normal'>Reach the game's normal ending.</div><br>
 	
-		<input type='checkbox' id="checkboxSave"></input><div class='bruh'>Classic Guy</div> <div class='normal'>Reach the game's ending through Sunken City.</div><br>
+		<input type='checkbox' id="checkboxSave16" class="box" /><div class='bruh'>Classic Guy</div> <div class='normal'>Reach the game's ending through Sunken City.</div><br>
 	</div>	
 </div>	
 
