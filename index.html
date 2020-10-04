@@ -5,7 +5,9 @@
 <script>
 jQuery($ => {
   var arr = JSON.parse(localStorage.getItem('checked')) || [];
-  arr.forEach((c, i) => $('.box').eq(i).prop('checked', c));
+  arr.forEach(function(checked, i) {
+    $('.box').eq(i).prop('checked', checked);
+  });
 
   $(".box").click(() => {  
     var arr = $('.box').map((i, el) => el.checked).get();
