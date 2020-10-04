@@ -1,0 +1,24 @@
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+div.background {
+  border: 2px solid black;
+}
+div.transbox {
+  margin: 0px;
+  padding: 10px;
+  background-color: #000000;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+div.bruh {
+	color: yellow;
+	font-weight: bold;
+}
+div.normal {
+	color: white;
+}

@@ -1,0 +1,65 @@
+<head>
+<link rel="stylesheet" href="new 2.css">
+</head>
+
+<script>
+function save(){
+    var checkbox = document.getElementById('checkbox1');
+    localStorage.setItem('checkbox1', checkbox.checked);
+}
+
+function load(){    
+    var checked = JSON.parse(localStorage.getItem('checkbox1'));
+    document.getElementById("checkbox1").checked = checked;
+}
+
+}
+function wis(){
+    location.reload();
+    localStorage.clear()
+
+}
+</script>
+
+<body onload="load()">
+
+<input type="button" id="SaveButton" value="Save" onclick="save()"/>
+<input type="button" id="EraseButton" value="Erase" onclick="wis()"/>
+
+<div class="background">
+	<div class="transbox">
+		<input type='checkbox' id="checkbox1"></input><div class='bruh'>Alto Singh</div> <div class='normal'>In a coffin after Quillback in 1-4.</div> <br>
+	
+		<input type='checkbox'><div class='bruh'>Liz Mutton</div> <div class='normal'>In a coffin in 2-1 (Jungle).</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Nekka the Eagle</div> <div class='normal'>In a coffin in the Black Market.</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Lise Project</div> <div class='normal'>In a coffin in 2-1 (Volcana).</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Coco von Diamonds</div> <div class='normal'>In a coffin in Vlad's Castle.</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Manfred Tunnel</div> <div class='normal'>In a coffin in Ankh cave (Olmec's Lair).</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Little Jay</div> <div class='normal'>In a coffin in 4-4 (Tide Pool).</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Tina Flan</div> <div class='normal'>In a coffin in Abzu.</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Valerie Crump</div> <div class='normal'>In a coffin in 4-4 (Temple of Anubis).</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Au</div> <div class='normal'>In a coffin in the City of Gold.</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Demi von Diamonds</div> <div class='normal'>In a coffin in Yeti cave.</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Pilot</div> <div class='normal'>In a coffin in Mothership.</div><br>
+		
+		<input type='checkbox'><div class='bruh'>Princess Airyn</div> <div class='normal'>In a coffin in Neo Babylon.</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Dirk Yamoaka</div> <div class='normal'>In a coffin in Goliath Frog's stomach (Sunken City).</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Guy Spelunky</div> <div class='normal'>Reach the game's normal ending.</div><br>
+	
+		<input type='checkbox'><div class='bruh'>Classic Guy</div> <div class='normal'>Reach the game's ending through Sunken City.</div><br>
+	</div>	
+</div>	
+
+</body>
