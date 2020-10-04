@@ -4,31 +4,32 @@
 
 <script>
 function save(){
-    var checkbox = document.getElementById('checkbox1');
-    localStorage.setItem('checkbox1', checkbox.checked);
+    var checkbox = document.getElementById('checkbox1zaal1');
+    localStorage.setItem('checkbox1zaal1', checkbox.checked);
 }
 
 function load(){    
-    var checked = JSON.parse(localStorage.getItem('checkbox1'));
-    document.getElementById("checkbox1").checked = checked;
+    var checked = JSON.parse(localStorage.getItem('checkbox1zaal1'));
+    document.getElementById("checkbox1zaal1").checked = checked;
 }
 
-}
 function wis(){
     location.reload();
     localStorage.clear()
 
 }
+
+load();
 </script>
 
 <body onload="load()">
 
-<input type="button" id="SaveButton" value="Save" onclick="save()"/>
-<input type="button" id="EraseButton" value="Erase" onclick="wis()"/>
+<input type="button" id="ReserveerButton1" value="save" onclick="save()"/>
+<input type="button" id="Wisbutton1" value="delete" onclick="wis()"/>
 
 <div class="background">
 	<div class="transbox">
-		<input type='checkbox' id="checkbox1"></input><div class='bruh'>Alto Singh</div> <div class='normal'>In a coffin after Quillback in 1-4.</div> <br>
+		<input type='checkbox' id="checkbox1zaal1"></input><div class='bruh'>Alto Singh</div> <div class='normal'>In a coffin after Quillback in 1-4.</div> <br>
 	
 		<input type='checkbox'><div class='bruh'>Liz Mutton</div> <div class='normal'>In a coffin in 2-1 (Jungle).</div><br>
 	
