@@ -1,12 +1,1 @@
-<!DOCTYPE html>
-<head>
-<link rel="stylesheet" href="new 2.css">
-</head>
 
-<script src="savescript.js"></script>
-
-<body>
-<input type="checkbox" id="box-1" class="box" />
-<input type="checkbox" id="box-2" class="box" />
-<input type="checkbox" id="box-3" class="box" />
-</body>
