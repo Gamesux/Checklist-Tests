@@ -1,3 +1,4 @@
+
 body {
   background-image: url("background.jpg");
   background-repeat: no-repeat;
@@ -21,4 +22,26 @@ div.bruh {
 }
 div.normal {
 	color: white;
+}
+.collapsible {
+  background-color: #fdff9c;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.active, .collapsible:hover {
+  background-color: #e2e3b1;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
 }
