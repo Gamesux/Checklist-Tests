@@ -24,7 +24,7 @@ div.normal {
 	color: white;
 }
 .collapsible {
-  background:url(background.jpg) no-repeat;
+  background: url(background.jpg) no-repeat;
   color: #444;
   cursor: pointer;
   padding: 18px;
