@@ -24,7 +24,7 @@ div.normal {
 	color: white;
 }
 .collapsible {
-  background: url(background.jpg) no-repeat;
+  background: url(button.png) no-repeat;
   color: #ffffff;
   cursor: pointer;
   padding: 18px;
@@ -37,7 +37,7 @@ div.normal {
 }
 
 .active, .collapsible:hover {
-  background-color: #e2e3b1;
+  background: url(buttonHighlight.png) no-repeat;
 }
 
 .content {
